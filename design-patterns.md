@@ -37,8 +37,20 @@ Any file in the application requiring backend access imports this shared instanc
 - Provides a single point of configuration for the backend URL and API keys.
 
 ### UML Diagram
+
 **Singleton Pattern**
+
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {
+  'background': '#ffffff',
+  'primaryColor': '#ffffff',
+  'primaryTextColor': '#000000',
+  'primaryBorderColor': '#000000',
+  'lineColor': '#000000',
+  'secondaryColor': '#ffffff',
+  'tertiaryColor': '#ffffff'
+}}}%%
+
 classDiagram
     class SupabaseClient {
         - instance: SupabaseClient
@@ -47,8 +59,8 @@ classDiagram
         + auth() Auth
         + from() QueryBuilder
     }
+
     SupabaseClient --> SupabaseClient : creates and returns
-```
 
 ## 2. Factory Method Pattern
 ### Problem
