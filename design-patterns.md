@@ -1,7 +1,7 @@
 # Design Patterns
 ChefNextDoor
 
-This document describes the five software design patterns implemented in the ChefNextDoor application.
+This document presents the five software design patterns used in the development of the ChefNextDoor application and explains their implementation and purpose.
 
 The patterns are:
 1. Singleton Pattern
