@@ -239,7 +239,6 @@ classDiagram
 
 | Pattern | Purpose | Main Implementation |
 |---------|---------|---------------------|
-| Repository (Wait, I used Singleton) |  |  |
 | **Singleton** | Shares a single Supabase client instance | `frontend/lib/supabaseClient.ts` |
 | **Factory Method** | Centralizes role-specific user creation | `frontend/lib/api.ts` (register-user) |
 | **Strategy** | Encapsulates payment/processing variations | `frontend/lib/api.ts` (place-order) |
