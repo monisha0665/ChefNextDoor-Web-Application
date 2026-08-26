@@ -10,7 +10,7 @@ The patterns are:
 4. Facade Pattern
 5. Observer Pattern
 
-Each pattern is used to separate responsibilities and improve the maintainability, extensibility, and structure of the application.
+Each design pattern provides a clear structure for managing different parts of the application, making the code more organized, flexible, and easier to develop.
 
 ## 1. Singleton Pattern
 ### Problem
