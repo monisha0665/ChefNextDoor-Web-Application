@@ -1,4 +1,4 @@
-# Software Testing
+# 🔬 Software Testing
 
 ChefNextDoor uses a centralized automated testing suite located entirely within the `supabase/tests/` directory. This unified testing approach ensures reliability across our entire technology stack, spanning from our Supabase Edge Functions to our React UI Controllers. 
 
