@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sage-900: #24361F;
+}
+
+body {
+  background: theme('colors.cream');
+  color: theme('colors.sage.900');
+}
+
+@keyframes marquee-continuous {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-continuous {
+  animation: marquee-continuous 10s linear infinite;
+}
