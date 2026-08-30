@@ -85,7 +85,7 @@ export default function AdminDashboardPage() {
               { label: "Total Customers", val: "985", color: "text-orange-500", stroke: "#f97316", progress: 40 },
               { label: "Total Chefs", val: chefs.length.toString(), color: "text-blue-500", stroke: "#3b82f6", progress: 90 },
             ].map((stat, i) => (
-              <div key={i} className="bg-green-50 p-5 rounded-2xl shadow-sm border border-green-500 flex items-center justify-between">
+              <div key={i} className="bg-green-50 p-5 rounded-2xl shadow-sm border border-green-500 flex items-center justify-between hover:scale-[1.03] hover:shadow-md transition-all duration-300 cursor-pointer">
                 <div>
                   <p className="text-xs text-gray-500 font-medium mb-1">{stat.label}</p>
                   <p className="text-2xl font-bold">{stat.val}</p>
@@ -106,7 +106,7 @@ export default function AdminDashboardPage() {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Trending Items */}
-            <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:scale-[1.02] hover:shadow-lg transition-all duration-300">
               <h3 className="font-semibold text-gray-800 mb-6">Trending Items</h3>
               <div className="space-y-5">
                 {TRENDING_ITEMS.map((item, i) => (
@@ -134,7 +134,7 @@ export default function AdminDashboardPage() {
             </div>
 
             {/* Revenue Overview Step Chart */}
-            <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col">
+            <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col hover:scale-[1.02] hover:shadow-lg transition-all duration-300">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="font-semibold text-gray-800">Revenue Overview</h3>
                 <button className="text-black-400">≡</button>
@@ -165,7 +165,7 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* Manage Orders Section */}
-          <div className="bg-white p-6 rounded-3xl shadow-sm border border-black-100">
+          <div className="bg-white p-6 rounded-3xl shadow-sm border border-black-100 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
             <div className="flex justify-between items-center mb-6">
               <h3 className="font-semibold text-black-800">Manage Orders (View & Monitor Status)</h3>
               <button className="px-4 py-2 bg-slate-100 text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-200 transition-colors">
@@ -223,7 +223,7 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* Interactive Chef List */}
-          <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+          <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
             <div className="flex justify-between items-center mb-6">
               <h3 className="font-semibold text-gray-800">Chef Roster ({chefs.length})</h3>
               <button onClick={() => setIsAdding(!isAdding)} className="px-4 py-2 bg-slate-800 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors shadow-sm">
@@ -303,7 +303,7 @@ export default function AdminDashboardPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {REVIEWS.map((rev) => (
-                <div key={rev.id} className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 relative overflow-hidden group">
+                <div key={rev.id} className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-lg">👤</div>
                     <div>

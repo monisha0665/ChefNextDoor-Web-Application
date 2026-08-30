@@ -1,7 +1,12 @@
+"use client";
+
+import { useAuth } from "@/lib/authContext";
+
 const steps = ["Accepted", "Preparing", "On the Way", "Delivered"];
 
 export default function TrackingPage() {
   const currentStep = 2; // In production: derive from GET /api/orders/:id status
+  const { profile } = useAuth();
 
   return (
     <main className="max-w-6xl mx-auto px-5 py-10">
@@ -30,8 +35,19 @@ export default function TrackingPage() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="rounded-2xl overflow-hidden border border-sage-200 h-56 flex items-center justify-center text-sm bg-sage-100 text-sage-700">
-          🗺️ Live map placeholder
+        <div className="rounded-2xl overflow-hidden border border-sage-200 h-56 relative bg-sage-100">
+          <iframe 
+            width="100%" 
+            height="100%" 
+            frameBorder="0" 
+            scrolling="no" 
+            marginHeight={0} 
+            marginWidth={0} 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=91.8600,24.8900,91.8800,24.9000&layer=mapnik&marker=24.8950,91.8700" 
+            style={{ border: 0 }}
+            title="Live Delivery Map"
+            className="pointer-events-none opacity-90 saturate-150"
+          ></iframe>
         </div>
         <div className="rounded-2xl p-5 bg-white border border-sage-200">
           <p className="text-xs font-semibold uppercase tracking-wide mb-3 text-sage-700">
@@ -45,7 +61,7 @@ export default function TrackingPage() {
             </div>
           </div>
           <p className="text-sm mb-1">
-            <b>Rima&apos;s Apartment</b>, Sobhanighat Road
+            <b>{profile?.name || "Customer"}&apos;s Location</b>, Sobhanighat Road
           </p>
           <p className="text-xs text-sage-700">2 items • ৳600 • bKash</p>
         </div>

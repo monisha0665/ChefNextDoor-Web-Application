@@ -28,7 +28,12 @@ All tests are structurally organized inside the `supabase/tests/` folder matchin
 ```text
 supabase/tests/
 ├── api/                                    # External API and Edge Function wrapper tests
-│   └── test_routes.ts                      # Endpoint integration tests & data fetching validation
+│   ├── test_auth_routes.ts                 # Authentication orchestration and fallbacks
+│   ├── test_chef_routes.ts                 # Profile management and storage uploads
+│   ├── test_order_routes.ts                # Checkout execution and realtime status tracking
+│   ├── test_payment_routes.ts              # Webhook processing and refund validation
+│   ├── test_review_routes.ts               # Rating submissions and aggregated view testing
+│   └── test_search_routes.ts               # Advanced querying and full-text search filtering
 ├── services/                               # Isolated service and utility unit tests
 │   ├── cartContext.test.tsx                # Edge case tests for cart calculation logic
 │   ├── downloadHelper.test.ts              # Validation of file generation services
@@ -74,7 +79,7 @@ External infrastructure dependencies are completely isolated to ensure determini
 External network impacts of the observer pattern are isolated via Method Overriding. The `.update()` method on instances is intercepted to monitor invocation states without touching real SMTP or FCM push notification servers.
 
 **Client (Jest)**:
-In `test_routes.ts`, the `supabaseClient` is heavily mocked to simulate data returns and edge function invocations:
+In the API test files (e.g., `test_auth_routes.ts`), the `supabaseClient` is heavily mocked to simulate data returns and edge function invocations:
 ```typescript
 // Mocking Supabase Client & Edge Functions
 jest.mock('../lib/supabaseClient', () => {
