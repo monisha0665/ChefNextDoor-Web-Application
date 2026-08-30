@@ -1,4 +1,4 @@
-# Design Patterns
+# 🧩 Design Patterns
 ChefNextDoor
 
 This document presents the five software design patterns used in the development of the ChefNextDoor application and explains their implementation and purpose.
