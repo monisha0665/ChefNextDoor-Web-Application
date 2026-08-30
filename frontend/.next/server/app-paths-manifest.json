@@ -1,0 +1,8 @@
+{
+  "/(customer)/chefs/page": "app/(customer)/chefs/page.js",
+  "/(customer)/page": "app/(customer)/page.js",
+  "/(customer)/chefs/[id]/page": "app/(customer)/chefs/[id]/page.js",
+  "/(customer)/tracking/page": "app/(customer)/tracking/page.js",
+  "/recipes/page": "app/recipes/page.js",
+  "/logout/page": "app/logout/page.js"
+}
