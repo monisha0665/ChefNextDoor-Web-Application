@@ -129,7 +129,7 @@ npm run test
 
 | Order Tracking (Live) | Chef Dashboard | Admin Panel |
 |:---:|:---:|:---:|
-| <img src="frontend/public/tracking.png" width="300" /> | <img src="frontend/public/chef_dashboard.png" width="300" /> | <img src="frontend/public/admin.png" width="300" /> |
+| <img src="frontend/public/Order_Tracking.png" width="300" /> | <img src="frontend/public/Chef_dashboard.png" width="300" /> | <img src="frontend/public/Admin panel.png" width="300" /> |
 
 ---
 
