@@ -123,9 +123,9 @@ npm run test
 
 ## 📸 Screenshots
 
-| Landing Page | Chef Profile | Customer Checkout |
+| Landing Page | Chef Profile | Recipes |
 |:---:|:---:|:---:|
-| <img src="frontend/public/landing.png" width="300" /> | <img src="frontend/public/chef.png" width="300" /> | <img src="frontend/public/checkout.png" width="300" /> |
+| <img src="frontend/public/landing_page.png" width="300" /> | <img src="frontend/public/chef.png" width="300" /> | <img src="frontend/public/recipes.png" width="300" /> |
 
 | Order Tracking (Live) | Chef Dashboard | Admin Panel |
 |:---:|:---:|:---:|
