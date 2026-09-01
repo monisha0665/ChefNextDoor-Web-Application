@@ -131,6 +131,15 @@ npm run test
 |:---:|:---:|:---:|
 | <img src="frontend/public/Order_Tracking.png" width="300" /> | <img src="frontend/public/Chef_dashboard.png" width="300" /> | <img src="frontend/public/Admin panel.png" width="300" /> |
 
+
+| Cart page | Favorites page | Rating & Review page |
+|:---:|:---:|:---:|
+| <img src="frontend/public/Cart.png" width="300" /> | <img src="frontend/public/Favorites.png" width="300" /> | <img src="frontend/public/Rating.png" width="300" /> |
+
+| login page | register page |
+|:---:|:---:|
+| <img src="frontend/public/login.png" width="300" /> | <img src="frontend/public/register.png" width="300" />
+
 ---
 
 ## 🚀 Getting Started
