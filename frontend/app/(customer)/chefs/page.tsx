@@ -21,7 +21,7 @@ function BrowseChefsContent() {
   const [selectedCuisine, setSelectedCuisine] = useState("All cuisines");
   const [minRating, setMinRating] = useState("Any rating");
   const { chefs: globalChefs } = useChefContext();
-  
+
   // Initialize with cache if available to avoid flicker
   const [chefs, setChefs] = useState<Chef[]>(globalChefsCache || []);
   const [loading, setLoading] = useState(globalChefsCache === null);
@@ -30,7 +30,6 @@ function BrowseChefsContent() {
   useEffect(() => {
     setSearchTerm(urlSearch);
   }, [urlSearch]);
-
   // Load global chefs into the page
   useEffect(() => {
     const mappedChefs: Chef[] = globalChefs.map(c => ({
@@ -38,10 +37,12 @@ function BrowseChefsContent() {
       name: c.name,
       specialty: c.specialty,
       bio: c.bio || "A great home chef on ChefNextDoor.",
-      status: c.status,
+      status: c.status as "pending" | "active" | "blocked",
       rating_avg: c.rating_avg || 4.5,
       image_url: c.img || CHEF_IMAGES["default"],
     }));
+
+    // keep the rest of your existing code here
 
     // If cache is empty, we set it synchronously to mappedChefs so we don't flash "No chefs found"
     if (!globalChefsCache) {
