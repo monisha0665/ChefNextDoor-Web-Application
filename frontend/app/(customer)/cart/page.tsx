@@ -28,7 +28,10 @@ export default function CartPage() {
       await placeOrder({
         chefId: lines[0].chefId || "chef-amina",
         deliveryAddress: "Sobhanighat Road, Sylhet",
-        items: lines.map((l) => ({ menuItemId: l.menuItemId, quantity: l.quantity })),
+        items: lines.map((l) => ({
+          menuItemId: Number(l.menuItemId),
+          quantity: l.quantity,
+        })),
         paymentMethod: payMethod,
         paymentMeta:
           payMethod === "bkash" ? { bkashNumber: "01812345678" } : { cardNumber: "4111111111111111" },
